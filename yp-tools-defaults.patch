@@ -1,0 +1,39 @@
+--- yp-tools-2.4/src/yppasswd.c	Tue Aug 15 18:48:05 2000
++++ yp-tools-2.4/src/yppasswd.c	Tue Aug 15 18:58:45 2000
+@@ -656,6 +656,7 @@
+     {
+       char gecos[1024], *sp, new_gecos[1024];
+       char name[254], location[254], office[254], phone[254];
++      char oname[254], olocation[254], ooffice[254], ophone[254];
+ 
+       printf (_("\nChanging full name for %s on %s.\n"
+ 	     "To accept the default, simply press return. To enter an empty\n"
+@@ -663,20 +664,20 @@
+ 	      pwd->pw_name, master);
+ 
+       strncpy (gecos, pwd->pw_gecos, sizeof (gecos));
+-      sp = getfield (gecos, name, sizeof (name));
+-      if (newfield (progname, _("Name"), strtok (gecos, ","), name,
++      sp = getfield (gecos, oname, sizeof (oname));
++      if (newfield (progname, _("Name"), oname, name,
+ 		    sizeof (name)))
+ 	return 1;
+-      sp = getfield (sp, location, sizeof (location));
+-      if (newfield (progname, _("Location"), location, location,
++      sp = getfield (sp, olocation, sizeof (olocation));
++      if (newfield (progname, _("Location"), olocation, location,
+ 		    sizeof (location)))
+ 	return 1;
+-      sp = getfield (sp, office, sizeof (office));
+-      if (newfield (progname, _("Office Phone"), office, office,
++      sp = getfield (sp, ooffice, sizeof (ooffice));
++      if (newfield (progname, _("Office Phone"), ooffice, office,
+ 		    sizeof (office)))
+ 	return 1;
+-      sp = getfield (sp, phone, sizeof (phone));
+-      if (newfield (progname, _("Home Phone"), phone, phone, sizeof (phone)))
++      sp = getfield (sp, ophone, sizeof (ophone));
++      if (newfield (progname, _("Home Phone"), ophone, phone, sizeof (phone)))
+ 	return 1;
+       sprintf (new_gecos, "%s,%s,%s,%s", name, location, office, phone);
+       sp = new_gecos + strlen (new_gecos);

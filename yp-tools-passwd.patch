@@ -1,0 +1,32 @@
+--- yp-tools-2.4/man/nicknames.5.in
++++ yp-tools-2.4/man/nicknames.5.in	1999/10/30 11:55:14
+@@ -40,7 +40,7 @@
+ \f3networks.byaddr
+ .TP
+ \f3hosts
+-\f3hosts.byaddr
++\f3hosts.byname
+ .TP
+ \f3protocols
+ \f3protocols.bynumber
+--- yp-tools-2.4/src/yppasswd.c
++++ yp-tools-2.4/src/yppasswd.c	1999/10/30 12:23:41
+@@ -599,7 +599,7 @@
+       int tries = 0;
+       time_t tm;
+ 
+-      buf = (char *) malloc (30);
++      buf = (char *) malloc (129);
+ 
+       printf (_("Changing NIS password for %s on %s.\n"), pwd->pw_name,
+ 	      master);
+@@ -621,7 +621,8 @@
+ 	      return 1;
+ 	    }
+ 
+-	  strcpy (buf, p);
++	  strncpy (buf, p, 128);
++	  buf[128] = '\0';
+ 
+ #ifdef USE_CRACKLIB
+ 	  error_msg = FascistCheck (buf, CRACKLIB_DICTPATH);
