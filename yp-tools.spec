@@ -4,7 +4,7 @@ Summary(fr):	Clients NIS (YP)
 Summary(tr):	NIS (YP) istemcileri
 Name:		yp-tools
 Version:	2.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
@@ -57,6 +57,10 @@ sunucusuna gerek vardýr.
 %setup -q
 
 %build
+rm -f missing
+aclocal
+autoconf
+automake -a -c
 %configure \
 	--disable-domainname
 %{__make}
