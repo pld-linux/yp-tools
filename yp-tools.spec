@@ -15,6 +15,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
+# Source0-md5:	8d8d2c1c8b4a7e2027215aebe086f651
 Source1:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-am_ac_cleanups.patch
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
