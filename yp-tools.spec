@@ -4,7 +4,7 @@ Version:	2.3
 Release:	1
 Copyright:	GNU
 Group:		System Environment/Base
-Source:		ftp://ftp.kernel.org/pub/linux/utils/net/NIS/yp-tools-%{version}.tar.gz
+Source:		ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.gz
 Url:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
 Buildroot:	/tmp/yp-tools-root
 Obsoletes:	yppasswd, yp-clients
