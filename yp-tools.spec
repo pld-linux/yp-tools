@@ -120,7 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f yp-tools.lang
 %defattr(644,root,root,755)
-%doc *.gz etc/*.gz 
+%doc *.gz etc/*.gz
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man[158]/*
