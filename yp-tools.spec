@@ -99,7 +99,7 @@ sunucusuna gerek vardýr.
 rm -f missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure \
 	--disable-domainname
 %{__make}
