@@ -1,0 +1,15 @@
+--- yp-tools-2.4/src/yppasswd.c
++++ yp-tools-2.4/src/yppasswd.c
+@@ -283,8 +283,10 @@
+       return NULL;
+     }
+ 
+-  strncpy (buffer, resp.valdat.valdat_val, resp.valdat.valdat_len);
+-  buffer[resp.valdat.valdat_len] = '\0';
++  strncpy (buffer, resp.valdat.valdat_val, sizeof (buffer));
++  buffer[sizeof (buffer) - 1] = '\0';
++  if (resp.valdat.valdat_len < sizeof (buffer))
++	buffer[resp.valdat.valdat_len] = '\0';
+   free (resp.valdat.valdat_val);
+ 
+   ptr = buffer;
