@@ -8,18 +8,19 @@ Summary(pt_BR):	Clientes NIS (YP)
 Summary(ru):	Клиентские программы NIS (или YP)
 Summary(tr):	NIS (YP) istemcileri
 Summary(uk):	Кл╕╓нтськ╕ програми NIS (або YP)
-Summary(zh_CN):	NIS(╩Руъ YP)©м╩╖╤кЁлпР.
+Summary(zh_CN):	NIS(╩Руъ YP)©м╩╖╤кЁлпР
 Name:		yp-tools
-Version:	2.6
-Release:	5
+Version:	2.7
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
 Source1:	%{name}-non-english-man-pages.tar.bz2
-Patch0:		%{name}-passwd.patch
+Patch0:		%{name}-am_ac_cleanups.patch
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	yppasswd, yp-clients
 Requires:	ypbind
@@ -139,6 +140,7 @@ glibc 2.x та libc верс╕й 5.4.21 та старше. Цей пакет м╕стить т╕льки
 
 %build
 rm -f missing
+%{__gettextize}
 aclocal
 %{__autoconf}
 %{__automake}
@@ -153,8 +155,6 @@ rm -rf $RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-gzip -9nf AUTHORS README ChangeLog NEWS THANKS TODO etc/nsswitch.conf
-
 %find_lang %{name}
 
 %clean
@@ -162,7 +162,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f yp-tools.lang
 %defattr(644,root,root,755)
-%doc *.gz etc/*.gz
+%doc AUTHORS README ChangeLog NEWS THANKS TODO etc/nsswitch.conf
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man[158]/*
