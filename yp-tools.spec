@@ -6,7 +6,7 @@ Copyright:	GNU
 Group:		System Environment/Base
 Source:		ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.gz
 Url:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	yppasswd, yp-clients
 Requires:	ypbind
 
