@@ -140,8 +140,8 @@ glibc 2.x та libc верс╕й 5.4.21 та старше. Цей пакет м╕стить т╕льки
 %build
 rm -f missing
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--disable-domainname
 %{__make}
