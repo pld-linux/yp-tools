@@ -3,16 +3,13 @@ Summary(de):	NIS (YP)-Clients
 Summary(fr):	Clients NIS (YP)
 Summary(tr):	NIS (YP) istemcileri
 Name:		yp-tools
-Version:	2.4
-Release:	7
+Version:	2.5
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
-Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.gz
-Patch0:		yp-tools-defaults.patch
-Patch1:		yp-tools-passwd.patch
-Patch2:		yp-tools.patch
+Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	yppasswd, yp-clients
@@ -58,9 +55,6 @@ sunucusuna gerek vardýr.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 %configure \
@@ -70,7 +64,7 @@ sunucusuna gerek vardýr.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR="$RPM_BUILD_ROOT"
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS README ChangeLog NEWS THANKS TODO etc/nsswitch.conf
 
