@@ -5,7 +5,7 @@ Summary(pl):	Klienci NIS (YP)
 Summary(tr):	NIS (YP) istemcileri
 Name:		yp-tools
 Version:	2.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
@@ -13,6 +13,7 @@ Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
 Group(pt_BR):	Rede/Utilitários
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
+Source1:	%{name}-non-english-man-pages.tar.bz2
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -93,6 +94,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+
 gzip -9nf AUTHORS README ChangeLog NEWS THANKS TODO etc/nsswitch.conf
 
 %find_lang %{name}
@@ -106,4 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man[158]/*
+%lang(fi) %{_mandir}/fi/man[158]/*
+%lang(ja) %{_mandir}/ja/man[158]/*
+%lang(pl) %{_mandir}/pl/man[158]/*
 /var/yp/nicknames
