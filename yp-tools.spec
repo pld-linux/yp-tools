@@ -141,7 +141,7 @@ glibc 2.x та libc верс╕й 5.4.21 та старше. Цей пакет м╕стить т╕льки
 %build
 rm -f missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
