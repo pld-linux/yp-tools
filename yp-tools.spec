@@ -1,6 +1,7 @@
 Summary:	NIS (or YP) client programs
 Summary(de):	NIS (YP)-Clients
 Summary(fr):	Clients NIS (YP)
+Summary(pl):	Klienci NIS (YP)
 Summary(tr):	NIS (YP) istemcileri
 Name:		yp-tools
 Version:	2.5
@@ -8,9 +9,13 @@ Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
+Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
+Group(pt_BR):	Rede/Utilitários
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	yppasswd, yp-clients
 Requires:	ypbind
@@ -47,6 +52,24 @@ Implantation de NIS pour Linux basée sur l'YP de FreeBSD.
 
 Cette implantation n'offre que les *clients* NIS. Vous devez avoir un
 serveur NIS qui tourne.
+
+%description -l pl
+NIS (Network Information Service - sieciowy system informacji) jest
+systemem dostarczaj±cym przez informacje sieciowe (loginy, has³a,
+katalogi domowe, grupy u¿ytkowników) do wszystkich maszyn w sieci. NIS
+mo¿e pozwalaæ u¿ytkownikom logowaæ siê na dowoln± maszynê w sieci o
+ile na tej maszynie dzia³aj± programy klienckie NIS i has³o
+u¿ytkownika jest zapisane w bazie NIS passwd. NIS by³ wcze¶niej znany
+jako Sun Yellow Pages (YP).
+
+Implementacja NIS z tego pakietu bazuje na YP z FreeBSD. Ten pakiet
+zawiera tylko klientów NIS. Aby u¿ywaæ klientów, musisz mieæ gdzie¶ w
+sieci dzia³aj±cy serwer NIS - ten znajduje siê w pakiecie ypserv.
+
+Zainstaluj pakiet yp-tools je¿eli potrzebujesz programów klienckich
+NIS. Bêdziesz potrzebowa³ zainstalowaæ te¿ pakiet ypbind na ka¿dej
+maszynie z klientami NIS. Je¿eli potrzebujesz serwer NIS, zainstaluj
+pakiet ypserv na jednej maszynie w sieci.
 
 %description -l tr
 Bu paket Linux için bir NIS uyarlamasýnýn yalnýzca istemci kýsýmlarýný
