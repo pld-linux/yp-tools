@@ -10,12 +10,12 @@ Summary(tr):	NIS (YP) istemcileri
 Summary(uk):	Кл╕╓нтськ╕ програми NIS (або YP)
 Summary(zh_CN):	NIS(╩Руъ YP)©м╩╖╤кЁлпР
 Name:		yp-tools
-Version:	2.8
+Version:	2.9
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
-# Source0-md5:	4a6792c367a3e01e4af7b07f449039e9
+# Source0-md5:	19de06a04129ec26773f9198e086fcd4
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	44a8ee872fa7a8df95ce311356a3cb95
 Patch0:		%{name}-2.7-md5.patch
