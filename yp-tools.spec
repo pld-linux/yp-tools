@@ -59,7 +59,7 @@ sunucusuna gerek vardýr.
 LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--disable-domainname
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
