@@ -1,11 +1,13 @@
 Summary:	NIS (or YP) client programs
 Summary(de):	NIS (YP)-Clients
+Summary(es):	Clientes NIS (YP)
 Summary(fr):	Clients NIS (YP)
 Summary(pl):	Klienci NIS (YP)
+Summary(pt_BR):	Clientes NIS (YP)
 Summary(tr):	NIS (YP) istemcileri
 Name:		yp-tools
-Version:	2.5
-Release:	3
+Version:	2.6
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
@@ -48,6 +50,14 @@ für FreeBSD.
 Diese Implementierung stellt nur NIS-_Clients_ zur Verfügung. Es muß
 irgendwo bereits ein NIS-Server laufen.
 
+%description -l es
+Esta implementación de NIS para Linux está basada en el YP para
+FreeBSD. Es un porte especial para glibc 2.x y libc $>$=5.4.21. Esta
+implementación solamente provee clientes NIS. Debes tener un servidor
+NIS ejecutando en alguna máquina. Puedes encontrar uno para Linux en
+http://www-vt.uni-paderborn.de/\~kukuk/Linux/nis.html. Por Favor, lee
+también NIS-HOWTO.
+
 %description -l fr
 Implantation de NIS pour Linux basée sur l'YP de FreeBSD.
 
@@ -71,6 +81,15 @@ Zainstaluj pakiet yp-tools je¿eli potrzebujesz programów klienckich
 NIS. Bêdziesz potrzebowa³ zainstalowaæ te¿ pakiet ypbind na ka¿dej
 maszynie z klientami NIS. Je¿eli potrzebujesz serwer NIS, zainstaluj
 pakiet ypserv na jednej maszynie w sieci.
+
+%description -l pt_BR
+Esta implementação de NIS para Linux é baseada no YP para FreeBSD. Ele
+é um porte especial para glibc 2.x e libc >=5.4.21.
+
+Esta implementação somente provê clientes NIS. Você deve ter um
+servidor NIS rodando em alguma máquina. Você pode encontrar um para o
+Linux em http://www-vt.uni-paderborn.de/~kukuk/Linux/nis.html. Por
+favor leia também o NIS-HOWTO.
 
 %description -l tr
 Bu paket Linux için bir NIS uyarlamasýnýn yalnýzca istemci kýsýmlarýný
