@@ -2,16 +2,21 @@ Summary:	NIS (or YP) client programs
 Summary(de):	NIS (YP)-Clients
 Summary(es):	Clientes NIS (YP)
 Summary(fr):	Clients NIS (YP)
+Summary(ja):	NIS (╓ч╓©╓о YP)╔╞╔И╔╓╔╒╔С╔х╔в╔М╔╟╔И╔Ю
 Summary(pl):	Klienci NIS (YP)
 Summary(pt_BR):	Clientes NIS (YP)
+Summary(ru):	Клиентские программы NIS (или YP)
 Summary(tr):	NIS (YP) istemcileri
+Summary(uk):	Кл╕╓нтськ╕ програми NIS (або YP)
+Summary(zh_CN):	NIS(╩Руъ YP)©м╩╖╤кЁлпР.
 Name:		yp-tools
 Version:	2.6
-Release:	2
+Release:	5
 License:	GPL
 Group:		Networking/Utilities
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
 Source1:	%{name}-non-english-man-pages.tar.bz2
+Patch0:		%{name}-passwd.patch
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -87,13 +92,50 @@ servidor NIS rodando em alguma mАquina. VocЙ pode encontrar um para o
 Linux em http://www-vt.uni-paderborn.de/~kukuk/Linux/nis.html. Por
 favor leia tambИm o NIS-HOWTO.
 
+%description -l ru
+Network Information Service (NIS) - это система, предоставляющая
+сетевую информацию (имена пользователей, пароли, домашние каталоги,
+информацию о группах) всем машинам сети. NIS позволяет пользователям
+логиниться на любой машине в сети если на этой машине запущены
+клиентские программы NIS и пароль пользователя внесен в базу данных
+паролей NIS. NIS также известен как Sun Yellow Pages (YP).
+
+Данная реализация NIS основана на YP из FreeBSD и специально
+портирована под glibc 2.x и libc версий 5.4.21 или позже. Это пакет
+содержит только клиентские программы NIS. Для того, чтобы использовать
+эти клиенты, необходимо чтобы где-то в сети работал сервер NIS. Такой
+сервер включен в пакет ypserv.
+
+Установите пакет yp-tools на всех машинах, которые запускают
+клиентские программы NIS. Если вам нужен NIS-сервер, вам также
+необходимо установить пакет ypserv на какой-то из машин вашей сети.
+
 %description -l tr
 Bu paket Linux iГin bir NIS uyarlamasЩnЩn yalnЩzca istemci kЩsЩmlarЩnЩ
 iГermektedir. Bu hizmetten yararlanabilmek iГin ГalЩЧan bir NIS
 sunucusuna gerek vardЩr.
 
+%description -l uk
+Network Information Service (NIS) - це система, яка нада╓ мережеву
+╕нформац╕ю (╕мена користувач╕в, парол╕, домашн╕ каталоги, ╕нформац╕ю
+про групи) вс╕м машинам мереж╕. NIS дозволя╓ користувачам лог╕нитися
+на будь-як╕й машин╕ мереж╕ якщо на ц╕й машин╕ запущен╕ кл╕╓нтськ╕
+програми NIS ╕ пароль користувача внесений до бази даних парол╕в NIS.
+NIS також в╕домий як Sun Yellow Pages (YP).
+
+Ця реал╕зац╕я NIS базована на YP з FreeBSD ╕ спец╕ально портована п╕д
+glibc 2.x та libc верс╕й 5.4.21 та старше. Цей пакет м╕стить т╕льки
+кл╕╓нтськ╕ програми NIS. Для того, щоб використовувати ц╕ кл╕╓нти,
+необх╕дно щоб десь у мереж╕ працював сервер NIS. Такий сервер
+м╕ститься у пакет╕ ypserv.
+
+Встанов╕ть пакет yp-tools на ус╕х машинах, як╕ запускають кл╕╓нтськ╕
+програми NIS. Якщо вам потр╕бен NIS-сервер, вам також необх╕дно
+встановити пакет ypserv на як╕йсь з машин вашо╖ мереж╕.
+
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
