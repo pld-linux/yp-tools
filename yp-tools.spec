@@ -51,7 +51,7 @@ gzip -9nf {AUTHORS,COPYING,README,ChangeLog,NEWS,etc/nsswitch.conf} \
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files -f yp-tools.lang
 %defattr(644,root,root,755)
 %doc {AUTHORS,COPYING,README,ChangeLog,NEWS,etc/nsswitch.conf}.gz
 %doc {THANKS,TODO}.gz
