@@ -41,8 +41,10 @@ make
 rm -rf $RPM_BUILD_ROOT
 make DESTDIR="$RPM_BUILD_ROOT" install
 
+strip --strip-unneeded $RPM_BUILD_ROOT/{%{_bindir},%{_sbindir}}/*
+
 gzip -9nf {AUTHORS,COPYING,README,ChangeLog,NEWS,etc/nsswitch.conf} \
-	{THANKS,TODO}
+	{THANKS,TODO} $RPM_BUILD_ROOT/%{_mandir}/*/*
 
 %find_lang %{name}
 
