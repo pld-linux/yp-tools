@@ -1,6 +1,6 @@
 Summary:	NIS (or YP) client programs.
 Name:		yp-tools
-Version:	2.3
+Version:	2.4
 Release:	1
 Copyright:	GNU
 Group:		System Environment/Base
