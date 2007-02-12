@@ -1,14 +1,14 @@
 Summary:	NIS (or YP) client programs
-Summary(de):	NIS (YP)-Clients
-Summary(es):	Clientes NIS (YP)
-Summary(fr):	Clients NIS (YP)
-Summary(ja):	NIS (╓ч╓©╓о YP)╔╞╔И╔╓╔╒╔С╔х╔в╔М╔╟╔И╔Ю
-Summary(pl):	Klienci NIS (YP)
-Summary(pt_BR):	Clientes NIS (YP)
-Summary(ru):	Клиентские программы NIS (или YP)
-Summary(tr):	NIS (YP) istemcileri
-Summary(uk):	Кл╕╓нтськ╕ програми NIS (або YP)
-Summary(zh_CN):	NIS(╩Руъ YP)©м╩╖╤кЁлпР
+Summary(de.UTF-8):   NIS (YP)-Clients
+Summary(es.UTF-8):   Clientes NIS (YP)
+Summary(fr.UTF-8):   Clients NIS (YP)
+Summary(ja.UTF-8):   NIS (Ц│╬Ц│÷Ц│╞ YP)Ц┌╞Ц┐╘Ц┌╓Ц┌╒Ц┐ЁЦ┐┬Ц┐≈Ц┐╜Ц┌╟Ц┐╘Ц┐═
+Summary(pl.UTF-8):   Klienci NIS (YP)
+Summary(pt_BR.UTF-8):   Clientes NIS (YP)
+Summary(ru.UTF-8):   п п╩п╦п╣п╫я┌я│п╨п╦п╣ п©я─п╬пЁя─п╟п╪п╪я▀ NIS (п╦п╩п╦ YP)
+Summary(tr.UTF-8):   NIS (YP) istemcileri
+Summary(uk.UTF-8):   п п╩я√я■п╫я┌я│я▄п╨я√ п©я─п╬пЁя─п╟п╪п╦ NIS (п╟п╠п╬ YP)
+Summary(zh_CN.UTF-8):   NIS(Ф┬√Х─┘ YP)Е╝╒Ф┬╥Г╚╞Г╗▀Е╨▐
 Name:		yp-tools
 Version:	2.9
 Release:	1
@@ -47,94 +47,94 @@ package on every machine running NIS client programs. If you need an
 NIS server, you'll need to install the ypserv package on one machine
 on the network.
 
-%description -l de
-Diese Implementierung von NIS fЭr Linux basiert auf dem YP-Material
-fЭr FreeBSD.
+%description -l de.UTF-8
+Diese Implementierung von NIS fц╪r Linux basiert auf dem YP-Material
+fц╪r FreeBSD.
 
-Diese Implementierung stellt nur NIS-_Clients_ zur VerfЭgung. Es muъ
+Diese Implementierung stellt nur NIS-_Clients_ zur Verfц╪gung. Es muц÷
 irgendwo bereits ein NIS-Server laufen.
 
-%description -l es
-Esta implementaciСn de NIS para Linux estА basada en el YP para
+%description -l es.UTF-8
+Esta implementaciцЁn de NIS para Linux estц║ basada en el YP para
 FreeBSD. Es un porte especial para glibc 2.x y libc $>$=5.4.21. Esta
-implementaciСn solamente provee clientes NIS. Debes tener un servidor
-NIS ejecutando en alguna mАquina. Puedes encontrar uno para Linux en
+implementaciцЁn solamente provee clientes NIS. Debes tener un servidor
+NIS ejecutando en alguna mц║quina. Puedes encontrar uno para Linux en
 http://www-vt.uni-paderborn.de/\~kukuk/Linux/nis.html. Por Favor, lee
-tambiИn NIS-HOWTO.
+tambiц╘n NIS-HOWTO.
 
-%description -l fr
-Implantation de NIS pour Linux basИe sur l'YP de FreeBSD.
+%description -l fr.UTF-8
+Implantation de NIS pour Linux basц╘e sur l'YP de FreeBSD.
 
 Cette implantation n'offre que les *clients* NIS. Vous devez avoir un
 serveur NIS qui tourne.
 
-%description -l pl
+%description -l pl.UTF-8
 NIS (Network Information Service - sieciowy system informacji) jest
-systemem dostarczaj╠cym przez informacje sieciowe (loginy, hasЁa,
-katalogi domowe, grupy u©ytkownikСw) do wszystkich maszyn w sieci. NIS
-mo©e pozwalaФ u©ytkownikom logowaФ siЙ na dowoln╠ maszynЙ w sieci o
-ile na tej maszynie dziaЁaj╠ programy klienckie NIS i hasЁo
-u©ytkownika jest zapisane w bazie NIS passwd. NIS byЁ wcze╤niej znany
+systemem dostarczajд┘cym przez informacje sieciowe (loginy, hasе┌a,
+katalogi domowe, grupy uе╪ytkownikцЁw) do wszystkich maszyn w sieci. NIS
+moе╪e pozwalaд┤ uе╪ytkownikom logowaд┤ siд≥ na dowolnд┘ maszynд≥ w sieci o
+ile na tej maszynie dziaе┌ajд┘ programy klienckie NIS i hasе┌o
+uе╪ytkownika jest zapisane w bazie NIS passwd. NIS byе┌ wczeе⌡niej znany
 jako Sun Yellow Pages (YP).
 
 Implementacja NIS z tego pakietu bazuje na YP z FreeBSD. Ten pakiet
-zawiera tylko klientСw NIS. Aby u©ywaФ klientСw, musisz mieФ gdzie╤ w
-sieci dziaЁaj╠cy serwer NIS - ten znajduje siЙ w pakiecie ypserv.
+zawiera tylko klientцЁw NIS. Aby uе╪ywaд┤ klientцЁw, musisz mieд┤ gdzieе⌡ w
+sieci dziaе┌ajд┘cy serwer NIS - ten znajduje siд≥ w pakiecie ypserv.
 
-Zainstaluj pakiet yp-tools je©eli potrzebujesz programСw klienckich
-NIS. BЙdziesz potrzebowaЁ zainstalowaФ te© pakiet ypbind na ka©dej
-maszynie z klientami NIS. Je©eli potrzebujesz serwer NIS, zainstaluj
+Zainstaluj pakiet yp-tools jeе╪eli potrzebujesz programцЁw klienckich
+NIS. Bд≥dziesz potrzebowaе┌ zainstalowaд┤ teе╪ pakiet ypbind na kaе╪dej
+maszynie z klientami NIS. Jeе╪eli potrzebujesz serwer NIS, zainstaluj
 pakiet ypserv na jednej maszynie w sieci.
 
-%description -l pt_BR
-Esta implementaГЦo de NIS para Linux И baseada no YP para FreeBSD. Ele
-И um porte especial para glibc 2.x e libc >=5.4.21.
+%description -l pt_BR.UTF-8
+Esta implementaц╖цёo de NIS para Linux ц╘ baseada no YP para FreeBSD. Ele
+ц╘ um porte especial para glibc 2.x e libc >=5.4.21.
 
-Esta implementaГЦo somente provЙ clientes NIS. VocЙ deve ter um
-servidor NIS rodando em alguma mАquina. VocЙ pode encontrar um para o
+Esta implementaц╖цёo somente provц╙ clientes NIS. Vocц╙ deve ter um
+servidor NIS rodando em alguma mц║quina. Vocц╙ pode encontrar um para o
 Linux em http://www-vt.uni-paderborn.de/~kukuk/Linux/nis.html. Por
-favor leia tambИm o NIS-HOWTO.
+favor leia tambц╘m o NIS-HOWTO.
 
-%description -l ru
-Network Information Service (NIS) - это система, предоставляющая
-сетевую информацию (имена пользователей, пароли, домашние каталоги,
-информацию о группах) всем машинам сети. NIS позволяет пользователям
-логиниться на любой машине в сети если на этой машине запущены
-клиентские программы NIS и пароль пользователя внесен в базу данных
-паролей NIS. NIS также известен как Sun Yellow Pages (YP).
+%description -l ru.UTF-8
+Network Information Service (NIS) - я█я┌п╬ я│п╦я│я┌п╣п╪п╟, п©я─п╣п╢п╬я│я┌п╟п╡п╩я▐я▌я┴п╟я▐
+я│п╣я┌п╣п╡я┐я▌ п╦п╫я└п╬я─п╪п╟я├п╦я▌ (п╦п╪п╣п╫п╟ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧, п©п╟я─п╬п╩п╦, п╢п╬п╪п╟я┬п╫п╦п╣ п╨п╟я┌п╟п╩п╬пЁп╦,
+п╦п╫я└п╬я─п╪п╟я├п╦я▌ п╬ пЁя─я┐п©п©п╟я┘) п╡я│п╣п╪ п╪п╟я┬п╦п╫п╟п╪ я│п╣я┌п╦. NIS п©п╬п╥п╡п╬п╩я▐п╣я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐п╪
+п╩п╬пЁп╦п╫п╦я┌я▄я│я▐ п╫п╟ п╩я▌п╠п╬п╧ п╪п╟я┬п╦п╫п╣ п╡ я│п╣я┌п╦ п╣я│п╩п╦ п╫п╟ я█я┌п╬п╧ п╪п╟я┬п╦п╫п╣ п╥п╟п©я┐я┴п╣п╫я▀
+п╨п╩п╦п╣п╫я┌я│п╨п╦п╣ п©я─п╬пЁя─п╟п╪п╪я▀ NIS п╦ п©п╟я─п╬п╩я▄ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡п╫п╣я│п╣п╫ п╡ п╠п╟п╥я┐ п╢п╟п╫п╫я▀я┘
+п©п╟я─п╬п╩п╣п╧ NIS. NIS я┌п╟п╨п╤п╣ п╦п╥п╡п╣я│я┌п╣п╫ п╨п╟п╨ Sun Yellow Pages (YP).
 
-Данная реализация NIS основана на YP из FreeBSD и специально
-портирована под glibc 2.x и libc версий 5.4.21 или позже. Это пакет
-содержит только клиентские программы NIS. Для того, чтобы использовать
-эти клиенты, необходимо чтобы где-то в сети работал сервер NIS. Такой
-сервер включен в пакет ypserv.
+п■п╟п╫п╫п╟я▐ я─п╣п╟п╩п╦п╥п╟я├п╦я▐ NIS п╬я│п╫п╬п╡п╟п╫п╟ п╫п╟ YP п╦п╥ FreeBSD п╦ я│п©п╣я├п╦п╟п╩я▄п╫п╬
+п©п╬я─я┌п╦я─п╬п╡п╟п╫п╟ п©п╬п╢ glibc 2.x п╦ libc п╡п╣я─я│п╦п╧ 5.4.21 п╦п╩п╦ п©п╬п╥п╤п╣. п╜я┌п╬ п©п╟п╨п╣я┌
+я│п╬п╢п╣я─п╤п╦я┌ я┌п╬п╩я▄п╨п╬ п╨п╩п╦п╣п╫я┌я│п╨п╦п╣ п©я─п╬пЁя─п╟п╪п╪я▀ NIS. п■п╩я▐ я┌п╬пЁп╬, я┤я┌п╬п╠я▀ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄
+я█я┌п╦ п╨п╩п╦п╣п╫я┌я▀, п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ я┤я┌п╬п╠я▀ пЁп╢п╣-я┌п╬ п╡ я│п╣я┌п╦ я─п╟п╠п╬я┌п╟п╩ я│п╣я─п╡п╣я─ NIS. п╒п╟п╨п╬п╧
+я│п╣я─п╡п╣я─ п╡п╨п╩я▌я┤п╣п╫ п╡ п©п╟п╨п╣я┌ ypserv.
 
-Установите пакет yp-tools на всех машинах, которые запускают
-клиентские программы NIS. Если вам нужен NIS-сервер, вам также
-необходимо установить пакет ypserv на какой-то из машин вашей сети.
+пёя│я┌п╟п╫п╬п╡п╦я┌п╣ п©п╟п╨п╣я┌ yp-tools п╫п╟ п╡я│п╣я┘ п╪п╟я┬п╦п╫п╟я┘, п╨п╬я┌п╬я─я▀п╣ п╥п╟п©я┐я│п╨п╟я▌я┌
+п╨п╩п╦п╣п╫я┌я│п╨п╦п╣ п©я─п╬пЁя─п╟п╪п╪я▀ NIS. п∙я│п╩п╦ п╡п╟п╪ п╫я┐п╤п╣п╫ NIS-я│п╣я─п╡п╣я─, п╡п╟п╪ я┌п╟п╨п╤п╣
+п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ я┐я│я┌п╟п╫п╬п╡п╦я┌я▄ п©п╟п╨п╣я┌ ypserv п╫п╟ п╨п╟п╨п╬п╧-я┌п╬ п╦п╥ п╪п╟я┬п╦п╫ п╡п╟я┬п╣п╧ я│п╣я┌п╦.
 
-%description -l tr
-Bu paket Linux iГin bir NIS uyarlamasЩnЩn yalnЩzca istemci kЩsЩmlarЩnЩ
-iГermektedir. Bu hizmetten yararlanabilmek iГin ГalЩЧan bir NIS
-sunucusuna gerek vardЩr.
+%description -l tr.UTF-8
+Bu paket Linux iц╖in bir NIS uyarlamasд╠nд╠n yalnд╠zca istemci kд╠sд╠mlarд╠nд╠
+iц╖ermektedir. Bu hizmetten yararlanabilmek iц╖in ц╖alд╠е÷an bir NIS
+sunucusuna gerek vardд╠r.
 
-%description -l uk
-Network Information Service (NIS) - це система, яка нада╓ мережеву
-╕нформац╕ю (╕мена користувач╕в, парол╕, домашн╕ каталоги, ╕нформац╕ю
-про групи) вс╕м машинам мереж╕. NIS дозволя╓ користувачам лог╕нитися
-на будь-як╕й машин╕ мереж╕ якщо на ц╕й машин╕ запущен╕ кл╕╓нтськ╕
-програми NIS ╕ пароль користувача внесений до бази даних парол╕в NIS.
-NIS також в╕домий як Sun Yellow Pages (YP).
+%description -l uk.UTF-8
+Network Information Service (NIS) - я├п╣ я│п╦я│я┌п╣п╪п╟, я▐п╨п╟ п╫п╟п╢п╟я■ п╪п╣я─п╣п╤п╣п╡я┐
+я√п╫я└п╬я─п╪п╟я├я√я▌ (я√п╪п╣п╫п╟ п╨п╬я─п╦я│я┌я┐п╡п╟я┤я√п╡, п©п╟я─п╬п╩я√, п╢п╬п╪п╟я┬п╫я√ п╨п╟я┌п╟п╩п╬пЁп╦, я√п╫я└п╬я─п╪п╟я├я√я▌
+п©я─п╬ пЁя─я┐п©п╦) п╡я│я√п╪ п╪п╟я┬п╦п╫п╟п╪ п╪п╣я─п╣п╤я√. NIS п╢п╬п╥п╡п╬п╩я▐я■ п╨п╬я─п╦я│я┌я┐п╡п╟я┤п╟п╪ п╩п╬пЁя√п╫п╦я┌п╦я│я▐
+п╫п╟ п╠я┐п╢я▄-я▐п╨я√п╧ п╪п╟я┬п╦п╫я√ п╪п╣я─п╣п╤я√ я▐п╨я┴п╬ п╫п╟ я├я√п╧ п╪п╟я┬п╦п╫я√ п╥п╟п©я┐я┴п╣п╫я√ п╨п╩я√я■п╫я┌я│я▄п╨я√
+п©я─п╬пЁя─п╟п╪п╦ NIS я√ п©п╟я─п╬п╩я▄ п╨п╬я─п╦я│я┌я┐п╡п╟я┤п╟ п╡п╫п╣я│п╣п╫п╦п╧ п╢п╬ п╠п╟п╥п╦ п╢п╟п╫п╦я┘ п©п╟я─п╬п╩я√п╡ NIS.
+NIS я┌п╟п╨п╬п╤ п╡я√п╢п╬п╪п╦п╧ я▐п╨ Sun Yellow Pages (YP).
 
-Ця реал╕зац╕я NIS базована на YP з FreeBSD ╕ спец╕ально портована п╕д
-glibc 2.x та libc верс╕й 5.4.21 та старше. Цей пакет м╕стить т╕льки
-кл╕╓нтськ╕ програми NIS. Для того, щоб використовувати ц╕ кл╕╓нти,
-необх╕дно щоб десь у мереж╕ працював сервер NIS. Такий сервер
-м╕ститься у пакет╕ ypserv.
+п╕я▐ я─п╣п╟п╩я√п╥п╟я├я√я▐ NIS п╠п╟п╥п╬п╡п╟п╫п╟ п╫п╟ YP п╥ FreeBSD я√ я│п©п╣я├я√п╟п╩я▄п╫п╬ п©п╬я─я┌п╬п╡п╟п╫п╟ п©я√п╢
+glibc 2.x я┌п╟ libc п╡п╣я─я│я√п╧ 5.4.21 я┌п╟ я│я┌п╟я─я┬п╣. п╕п╣п╧ п©п╟п╨п╣я┌ п╪я√я│я┌п╦я┌я▄ я┌я√п╩я▄п╨п╦
+п╨п╩я√я■п╫я┌я│я▄п╨я√ п©я─п╬пЁя─п╟п╪п╦ NIS. п■п╩я▐ я┌п╬пЁп╬, я┴п╬п╠ п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐п╡п╟я┌п╦ я├я√ п╨п╩я√я■п╫я┌п╦,
+п╫п╣п╬п╠я┘я√п╢п╫п╬ я┴п╬п╠ п╢п╣я│я▄ я┐ п╪п╣я─п╣п╤я√ п©я─п╟я├я▌п╡п╟п╡ я│п╣я─п╡п╣я─ NIS. п╒п╟п╨п╦п╧ я│п╣я─п╡п╣я─
+п╪я√я│я┌п╦я┌я▄я│я▐ я┐ п©п╟п╨п╣я┌я√ ypserv.
 
-Встанов╕ть пакет yp-tools на ус╕х машинах, як╕ запускають кл╕╓нтськ╕
-програми NIS. Якщо вам потр╕бен NIS-сервер, вам також необх╕дно
-встановити пакет ypserv на як╕йсь з машин вашо╖ мереж╕.
+п▓я│я┌п╟п╫п╬п╡я√я┌я▄ п©п╟п╨п╣я┌ yp-tools п╫п╟ я┐я│я√я┘ п╪п╟я┬п╦п╫п╟я┘, я▐п╨я√ п╥п╟п©я┐я│п╨п╟я▌я┌я▄ п╨п╩я√я■п╫я┌я│я▄п╨я√
+п©я─п╬пЁя─п╟п╪п╦ NIS. п╞п╨я┴п╬ п╡п╟п╪ п©п╬я┌я─я√п╠п╣п╫ NIS-я│п╣я─п╡п╣я─, п╡п╟п╪ я┌п╟п╨п╬п╤ п╫п╣п╬п╠я┘я√п╢п╫п╬
+п╡я│я┌п╟п╫п╬п╡п╦я┌п╦ п©п╟п╨п╣я┌ ypserv п╫п╟ я▐п╨я√п╧я│я▄ п╥ п╪п╟я┬п╦п╫ п╡п╟я┬п╬я≈ п╪п╣я─п╣п╤я√.
 
 %prep
 %setup -q
