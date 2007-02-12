@@ -1,14 +1,14 @@
 Summary:	NIS (or YP) client programs
-Summary(de.UTF-8):   NIS (YP)-Clients
-Summary(es.UTF-8):   Clientes NIS (YP)
-Summary(fr.UTF-8):   Clients NIS (YP)
-Summary(ja.UTF-8):   NIS (または YP)クライアントプログラム
-Summary(pl.UTF-8):   Klienci NIS (YP)
-Summary(pt_BR.UTF-8):   Clientes NIS (YP)
-Summary(ru.UTF-8):   Клиентские программы NIS (или YP)
-Summary(tr.UTF-8):   NIS (YP) istemcileri
-Summary(uk.UTF-8):   Клієнтські програми NIS (або YP)
-Summary(zh_CN.UTF-8):   NIS(或者 YP)客户端程序
+Summary(de.UTF-8):	NIS (YP)-Clients
+Summary(es.UTF-8):	Clientes NIS (YP)
+Summary(fr.UTF-8):	Clients NIS (YP)
+Summary(ja.UTF-8):	NIS (または YP)クライアントプログラム
+Summary(pl.UTF-8):	Klienci NIS (YP)
+Summary(pt_BR.UTF-8):	Clientes NIS (YP)
+Summary(ru.UTF-8):	Клиентские программы NIS (или YP)
+Summary(tr.UTF-8):	NIS (YP) istemcileri
+Summary(uk.UTF-8):	Клієнтські програми NIS (або YP)
+Summary(zh_CN.UTF-8):	NIS(或者 YP)客户端程序
 Name:		yp-tools
 Version:	2.9
 Release:	1
