@@ -10,22 +10,23 @@ Summary(tr.UTF-8):	NIS (YP) istemcileri
 Summary(uk.UTF-8):	Клієнтські програми NIS (або YP)
 Summary(zh_CN.UTF-8):	NIS(或者 YP)客户端程序
 Name:		yp-tools
-Version:	2.9
+Version:	2.10
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Networking/Utilities
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
-# Source0-md5:	19de06a04129ec26773f9198e086fcd4
+# Source0-md5:	c1bc7ea2339c766d8e6dffd3f5f2e8e1
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	44a8ee872fa7a8df95ce311356a3cb95
 Patch0:		%{name}-2.7-md5.patch
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	automake >= 1.5
 BuildRequires:	gettext-devel
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Obsoletes:	yppasswd, yp-clients
 Requires:	ypbind
+Obsoletes:	yp-clients
+Obsoletes:	yppasswd
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Network Information Service (NIS) is a system which provides
@@ -141,10 +142,10 @@ glibc 2.x та libc версій 5.4.21 та старше. Цей пакет м�
 %patch0 -p1
 
 %build
-rm -f missing
 %{__gettextize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	--disable-domainname
@@ -153,7 +154,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
@@ -162,13 +164,17 @@ bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f yp-tools.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog NEWS THANKS TODO etc/nsswitch.conf
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_sbindir}/*
-%{_mandir}/man[158]/*
-%lang(fi) %{_mandir}/fi/man[158]/*
-%lang(ja) %{_mandir}/ja/man[158]/*
-%lang(pl) %{_mandir}/pl/man[158]/*
+%attr(755,root,root) %{_bindir}/yp*
+%attr(755,root,root) %{_sbindir}/yp*
+%{_mandir}/man1/yp*.1*
+%{_mandir}/man5/nicknames.5*
+%{_mandir}/man8/yp*.8*
+%lang(fi) %{_mandir}/fi/man1/yp*.1*
+%lang(ja) %{_mandir}/ja/man1/yp*.1*
+%lang(ja) %{_mandir}/ja/man5/nicknames.5*
+%lang(ja) %{_mandir}/ja/man8/yp*.8*
+%lang(pl) %{_mandir}/pl/man1/yp*.1*
 /var/yp/nicknames
