@@ -10,19 +10,19 @@ Summary(tr.UTF-8):	NIS (YP) istemcileri
 Summary(uk.UTF-8):	Клієнтські програми NIS (або YP)
 Summary(zh_CN.UTF-8):	NIS(或者 YP)客户端程序
 Name:		yp-tools
-Version:	2.10
+Version:	2.12
 Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
-# Source0-md5:	c1bc7ea2339c766d8e6dffd3f5f2e8e1
+# Source0-md5:	ce1e06d86caa285fa8cd76fdf103f51e
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	44a8ee872fa7a8df95ce311356a3cb95
-Patch0:		%{name}-2.7-md5.patch
 URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.5
 BuildRequires:	gettext-devel
+BuildRequires:	libxcrypt-devel
 Requires:	ypbind
 Obsoletes:	yp-clients
 Obsoletes:	yppasswd
@@ -139,7 +139,6 @@ glibc 2.x та libc версій 5.4.21 та старше. Цей пакет м�
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__gettextize}
