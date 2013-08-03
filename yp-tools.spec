@@ -10,15 +10,15 @@ Summary(tr.UTF-8):	NIS (YP) istemcileri
 Summary(uk.UTF-8):	Клієнтські програми NIS (або YP)
 Summary(zh_CN.UTF-8):	NIS(或者 YP)客户端程序
 Name:		yp-tools
-Version:	2.12
+Version:	2.14
 Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
-Source0:	ftp://ftp.kernel.org/pub/linux/utils/net/NIS/%{name}-%{version}.tar.bz2
-# Source0-md5:	ce1e06d86caa285fa8cd76fdf103f51e
+Source0:	http://www.linux-nis.org/download/yp-tools//%{name}-%{version}.tar.bz2
+# Source0-md5:	ba1f121c17e3ad65368be173b977cd13
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	44a8ee872fa7a8df95ce311356a3cb95
-URL:		http://www-vt.uni-paderborn.de/~kukuk/linux/nis.html
+URL:		http://www.linux-nis.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.5
 BuildRequires:	gettext-devel
