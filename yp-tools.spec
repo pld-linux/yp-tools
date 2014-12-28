@@ -21,7 +21,7 @@ Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 URL:		http://www.linux-nis.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.5
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libxcrypt-devel
 Requires:	ypbind
 Obsoletes:	yp-clients
