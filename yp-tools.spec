@@ -1,3 +1,8 @@
+# TODO: use libxcrypt again? (or switch from libcrypt to libxcrypt globally)
+#
+# Conditional build:
+%bcond_with	cracklib	# cracklib support in yppasswd
+
 Summary:	NIS (or YP) client programs
 Summary(de.UTF-8):	NIS (YP)-Clients
 Summary(es.UTF-8):	Clientes NIS (YP)
@@ -10,19 +15,27 @@ Summary(tr.UTF-8):	NIS (YP) istemcileri
 Summary(uk.UTF-8):	Клієнтські програми NIS (або YP)
 Summary(zh_CN.UTF-8):	NIS(或者 YP)客户端程序
 Name:		yp-tools
-Version:	2.14
-Release:	2
+Version:	4.2.3
+Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
-Source0:	http://www.linux-nis.org/download/yp-tools//%{name}-%{version}.tar.bz2
-# Source0-md5:	ba1f121c17e3ad65368be173b977cd13
+#Source0Download: https://github.com/thkukuk/yp-tools/releases
+Source0:	https://github.com/thkukuk/yp-tools/archive/v%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	b2beee519500c48f27570958b1d6cb86
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	44a8ee872fa7a8df95ce311356a3cb95
 URL:		http://www.linux-nis.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.5
-BuildRequires:	gettext-tools
-BuildRequires:	libxcrypt-devel
+%{?with_cracklib:BuildRequires:	cracklib-devel}
+BuildRequires:	gettext-tools >= 0.19.2
+BuildRequires:	libnsl-devel >= 1.0.4
+BuildRequires:	libtirpc-devel >= 1.0.1
+BuildRequires:	libtool >= 2:2
+#BuildRequires:	libxcrypt-devel
+BuildRequires:	pkgconfig
+Requires:	libnsl >= 1.0.4
+Requires:	libtirpc >= 1.0.1
 Requires:	ypbind
 Obsoletes:	yp-clients
 Obsoletes:	yppasswd
@@ -142,11 +155,13 @@ glibc 2.x та libc версій 5.4.21 та старше. Цей пакет м�
 
 %build
 %{__gettextize}
+%{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure \
+	%{?with_cracklib:--enable-cracklib} \
 	--disable-domainname
 %{__make}
 
@@ -155,6 +170,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# man omitted from make install, but executable is installed
+cp -p man/yptest.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
@@ -165,12 +183,28 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS README ChangeLog NEWS THANKS TODO etc/nsswitch.conf
-%attr(755,root,root) %{_bindir}/yp*
-%attr(755,root,root) %{_sbindir}/yp*
-%{_mandir}/man1/yp*.1*
+%doc AUTHORS ChangeLog NEWS README THANKS etc/nsswitch.conf
+%attr(755,root,root) %{_bindir}/ypcat
+%attr(755,root,root) %{_bindir}/ypchfn
+%attr(755,root,root) %{_bindir}/ypchsh
+%attr(755,root,root) %{_bindir}/ypmatch
+%attr(755,root,root) %{_bindir}/yppasswd
+%attr(755,root,root) %{_bindir}/ypwhich
+%attr(755,root,root) %{_sbindir}/yp_dump_binding
+%attr(755,root,root) %{_sbindir}/yppoll
+%attr(755,root,root) %{_sbindir}/ypset
+%attr(755,root,root) %{_sbindir}/yptest
+%{_mandir}/man1/ypcat.1*
+%{_mandir}/man1/ypchfn.1*
+%{_mandir}/man1/ypchsh.1*
+%{_mandir}/man1/ypmatch.1*
+%{_mandir}/man1/yppasswd.1*
+%{_mandir}/man1/ypwhich.1*
 %{_mandir}/man5/nicknames.5*
-%{_mandir}/man8/yp*.8*
+%{_mandir}/man8/yp_dump_binding.8*
+%{_mandir}/man8/yppoll.8*
+%{_mandir}/man8/ypset.8*
+%{_mandir}/man8/yptest.8*
 %lang(fi) %{_mandir}/fi/man1/yp*.1*
 %lang(ja) %{_mandir}/ja/man1/yp*.1*
 %lang(ja) %{_mandir}/ja/man5/nicknames.5*
