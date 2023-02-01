@@ -16,7 +16,7 @@ Summary(uk.UTF-8):	Клієнтські програми NIS (або YP)
 Summary(zh_CN.UTF-8):	NIS(或者 YP)客户端程序
 Name:		yp-tools
 Version:	4.2.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Networking/Utilities
 #Source0Download: https://github.com/thkukuk/yp-tools/releases
